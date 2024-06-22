@@ -1,0 +1,217 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{catchfile}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\getenv}[2]{%
+  \CatchFileEdef{\temp}{|kpsewhich --var-value #2}{}%
+  \expandafter\let\csname #1\endcsname\temp
+}
+
+\getenv{email}{EMAIL}
+\getenv{phone}{PHONE}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://linkedin.com/}{\Large Niels de Koeijer}} & Email : \href{mailto:\email}{\email}\\
+    \href{https://www.linkedin.com/in/niels-de-koeijer/}{https://www.linkedin.com/in/niels-de-koeijer/} & Mobile : \href{tel:\phone}{\phone} \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Delft University of Technology}{Delft, The Netherlands}
+      {Master of Science in Electrical Engineering; Signal Processing Specialization}{Sep. 2018 -- July. 2021}
+    \resumeSubheading
+      {Delft University of Technology}{Delft, The Netherlands}
+      {Bachelor of Science in Electrical Engineering; Minor in Computational Science}{Sep. 2015 -- July. 2018}
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+\item{
+   \textbf{Programming Languages}{: C, C++, Rust, Python, MATLAB\hfill}\\
+}
+\item {
+   \textbf{Technologies}{: Docker, Embedded Linux, gstreamer, CMake}
+}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+%   Work as part of Research and Development Department:
+% ∗ Pioneering of AI inference pipeline, bringing research results to running real-time on an embedded device.
+% ∗ Design and implementation of a real-time source separation algorithm on an embedded device.
+% ∗ Design of a real-time packet loss concealment algorithm, running in C on an embedded device.
+% ∗ Design of a bass enhancement algorithm through real-time convex optimization on an embedded device.
+% ∗ Supervision of multiple MSc students, yielding collaboration on open-source signal processing libraries.
+% ◦ Algorithms and Software for ISOBEL Sound Zone Audio Streaming Framework:
+% ∗ Contributing ISOBEL research project, funded by Innovation Fund Denmark, leading to multiple publications.
+% ∗ Development of algorithms and a C++-based embedded streaming framework powered by gstreamer
+    \resumeSubheading
+      {Bang \& Olufsen}{Copenhagen, Denmark}
+      {Research DSP Engineer}{Oct 21 2021 - Present}
+      \resumeItemListStart
+        \resumeItem{Work as part of Research and Development Department}
+          {
+          \begin{itemize}
+              \item Pioneering of AI inference pipeline, bringing research results to running real-time on an embedded device.
+              \item Design and implementation of a real-time source separation algorithm on an embedded device. 
+              \item Design of a real-time packet loss concealment algorithm, running in C on an embedded device.
+              \item Design of a bass enhancement algorithm through real-time convex optimization on an embedded device.
+              \item Supervision of multiple MSc students, yielding collaboration on open-source signal processing libraries.
+          \end{itemize}
+          }
+        \resumeItem{Algorithms and Software for ISOBEL Sound Zone Audio Streaming Framework}
+          {
+          \begin{itemize}
+            \item Contributing ISOBEL research project, funded by Innovation Fund Denmark, leading to multiple publications.
+            \item Development of algorithms and a C++-based embedded streaming framework powered by gstreamer
+          \end{itemize}
+          }
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Bang \& Olufsen}{Struer, Denmark}
+      {Research Intern MSc Thesis}{Sep 20 2020 - Oct 21 2021}
+      \resumeItemListStart
+        \resumeItem{MSc Thesis Project}
+          {
+          \begin{itemize}
+            \item Collaborating with Bang \& Olufsen on Master thesis.
+            \item Work published in IEEE/ACM Transactions on Audio, Speech, and Language Processing.
+            \item Gained experience with: convex optimization, implementing interior point solvers, perceptual models.
+          \end{itemize}
+          }
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Arenal PCS}{Pijnacker, Netherlands}
+      {Embedded Software Developer}{Jul 19 2019 - Jul 20 2020}
+      \resumeItemListStart
+        \resumeItem{Software Development for Ultrasonic Measurement System}
+          {
+          \begin{itemize}
+              \item Designed and maintained a C\# codebase that drove an embedded ultrasonic sensor measurement system.
+              \item Collaborated with R\&D to design and implement new measurement algorithms.
+              \item Configured the Linux operating system for the readout of sensors and enabling remote VPN access.
+          \end{itemize}
+          }
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Delft University of Technology}{Delft, Netherlands}
+      {Teaching Assistant}{Sep 18 2018 - Oct 21 2021}
+      \resumeItemListStart
+        \resumeItem{Assistance BSc Course Signal Processing}
+          {
+          \begin{itemize}
+            \item Assisted students with practical implementations of signal processing techniques in MATLAB. Supervised and organised the final project for the course. 
+            \item Helped manage and create course material and content.
+          \end{itemize}
+          }
+        \resumeItem{Assistance MSc Course Scientific C++}
+          {
+          \begin{itemize}
+              \item Assisted students with their university assignments alongside professors, helping them understand theory covering C++17, specifically for use in practical scientific contexts. Topics included C++ templates, the C++ STL and project management in CMake.
+              \item Built and improved an online C++ homework environment within which the course was held.
+          \end{itemize}
+          }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\end{document}
+
