@@ -1,0 +1,85 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.ist
+*.loa
+*.lof
+*.lol
+*.lot
+*.maf
+*.mtc
+*.mtc0
+*.nav
+*.nlo
+*.nls
+*.out
+*.run.xml
+*.snm
+*.synctex(busy)
+*.synctex.gz
+*.tdo
+*.thm
+*.toc
+*.upa
+*.upb
+*.vrb
+
+# LaTeX editor specific files
+.texpadtmp
+# For TeXShop
+*.synctex.gz
+*.texshop
+# For Kile
+*.backup
+
+# LaTeX build directories
+_build/
+# For latexmk (optional, usually .latexmkrc configures it)
+latex.out/
+
+# Logs and databases
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex(busy)
+*.synctex.gz
+*.bbl
+*.aux
+*.log
+
+# Miscellaneous files
+*.pdfsync
+*.nav
+*.snm
+*.bak
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# PDFs and other output files
+*.dvi
+*.ps
+*.synctex.gz
+*.xdy
+
+main.private.pdf
